@@ -5,14 +5,16 @@
   Ich habe lediglich noch ein Lottozahlengenerator hinzugefügt.
   zur Zeit nur die 6aus49. Füge 6aus45 später hinzu.
 
+  Funktioniert leider noch nicht. Wenn mir jemand helfen kann, immer gerne!!! Bin Programmier Neuling!!!
+
+  Twitter: @Locke_04
+
 ###
 # Funktionsweise des Lottozahlen-Generators
 
   Einfach eines der folgenden Befehle sagen:
-  - Gib mir Lottozahlen
-  - sag mir die 6 richtigen
-  - Mach mich zum Millionär
-  - Generiere Lottozahlen
+  - Generator
+  - Zufallszahlen
   
 ###
 # siriproxy-lotto  Plugin
