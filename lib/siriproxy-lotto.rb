@@ -16,10 +16,8 @@ require 'timeout'
 # Funktionsweise des Lottozahlen-Generators
 #
 #  Einfach eines der folgenden Befehle sagen:
-#  - Gib mir Lottozahlen
-#  - sag mir die 6 richtigen
-#  - Mach mich zum Millionär
-#  - Generiere Lottozahlen
+#  - Generator
+#  - Zufallszahlen
 # 
 #######
 #
@@ -66,7 +64,7 @@ class SiriProxy::Plugin::Lotto < SiriProxy::Plugin
 
 # Lottozahlengenarator 6aus49 + Zusatzzahl
 
-listen_for /(Generiere Lottozahlen|Gib mir Lottozahlen|Sag mir die 6 richtigen|Mach mich zum Millionär).*(Deutschland)/i do
+listen_for /(Generator|Zufallszahlen)/i do
 	
 	zahlen = Array.new(6)
 	zahlen.map! {|l|
@@ -75,11 +73,10 @@ listen_for /(Generiere Lottozahlen|Gib mir Lottozahlen|Sag mir die 6 richtigen|M
 		end while zahlen.include?(randZahlInt)
 		l = randZahlInt
 	}
-		sz = rand(10)
+	sz = rand(10).to_i
 	
 	say "Hier sind deine Zufallszahlen" + zahlen[0] + zahlen[1] + zahlen[2] + zahlen[3] + zahlen[4] + zahlen[5] + "Und die Superzahl" + sz
-end
-
+	
 request_completed
 end
 	    
