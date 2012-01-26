@@ -18,6 +18,8 @@ require 'timeout'
 #  Einfach eines der folgenden Befehle sagen:
 #  - Generator
 #  - Zufallszahlen
+#  - Lottogenerator
+#  - Mach mich Reich
 # 
 #######
 #
@@ -64,18 +66,19 @@ class SiriProxy::Plugin::Lotto < SiriProxy::Plugin
 
 # Lottozahlengenarator 6aus49 + Zusatzzahl
 
-listen_for /(Generator|Zufallszahlen)/i do
+listen_for /(Lottogenerator|Generator|Mach mich Reich|Zufallszahlen)/i do
 	
-	zahlen = Array.new(6)
-	zahlen.map! {|l|
+	za = Array.new(6)
+	za.map! {|l|
 		begin
 			randZahlInt = ((rand * 49) + 1).to_i
-		end while zahlen.include?(randZahlInt)
+		end while za.include?(randZahlInt)
 		l = randZahlInt
 	}
 	sz = rand(10).to_i
 	
-	say "Hier sind deine Zufallszahlen" + "  " + zahlen[0].to_s() + "  " + zahlen[1].to_s() + "  " + zahlen[2].to_s() + "  " + zahlen[3].to_s() + "  " + zahlen[4].to_s() + "  " + zahlen[5].to_s() + "  " + "Und die Superzahl" + "  " + sz.to_s()
+	say "Hier sind deine Lottozahlen" + ": " + za[0].to_s() + ", " + za[1].to_s() + ", " + za[2].to_s() + ", " + za[3].to_s() + ", " + za[4].to_s() + ", " + za[5].to_s()
+	say "Und die Superzahl" + ": " + sz.to_s()
 	
 request_completed
 end
