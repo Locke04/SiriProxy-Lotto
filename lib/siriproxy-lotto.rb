@@ -75,7 +75,7 @@ listen_for /(Generator|Zufallszahlen)/i do
 	}
 	sz = rand(10).to_i
 	
-	say "Hier sind deine Zufallszahlen" + zahlen[0] + zahlen[1] + zahlen[2] + zahlen[3] + zahlen[4] + zahlen[5] + "Und die Superzahl" + sz
+	say "Hier sind deine Zufallszahlen" + zahlen[0].to_s + zahlen[1].to_s + zahlen[2].to_s + zahlen[3].to_s + zahlen[4].to_s + zahlen[5].to_s + "Und die Superzahl" + sz
 	
 request_completed
 end
