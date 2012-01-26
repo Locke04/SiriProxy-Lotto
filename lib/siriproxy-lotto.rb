@@ -23,12 +23,6 @@ require 'timeout'
 # 
 #######
 #
-# This is simple read the latest Lottery Numbers for Austria "6aus45" and Germany "6aus49" 
-# and Euromillionen
-#
-#       Remember to put this plugins into the "./siriproxy/config.yml" file 
-#######
-#
 # Das ist ein einfaches Siri liest die Lottozahlen vor - Plugin.
 # Funktioniert derzeit mit 6aus45 (Österreich) und 6aus49 (Deutschland) und Euromillionen
 # 
@@ -48,11 +42,7 @@ require 'timeout'
 # oder github.com/muhkuh0815/SiriProxy-Lotto
 # Video http://www.youtube.com/watch?v=Q6sedYlee1Q
 #
-#
-#### ToDo
-#
-# Gewinnabfrage
-#
+######
 
 class SiriProxy::Plugin::Lotto < SiriProxy::Plugin
     
